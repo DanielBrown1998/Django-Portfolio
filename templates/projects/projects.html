@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <h1>Projects</h1>
+    <p>Here are some of the projects I have worked on:</p>
+    <div class="container">
+        {% for item in projects %}
+            <div class='card'>
+                {{ item.name }}
+                {{ item.description }}
+                <a href="{{ item.link_github }}" class='link'>
+                    <img src="{% static "images/github.svg" %}" alt="ícone do github" class='icon'>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}
