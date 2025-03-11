@@ -10,12 +10,12 @@
     <title>{{name}}</title>
 </head>
 <body>
-    <div class="container-principal">
+    <main class="main">
         {% include "partials/_menu.html" %}
         <div class= 'content-column'>
             {% block content %}{% endblock content %}
+            {% include "partials/_footer.html" %}
         </div>
-    </div>
-    {% include "partials/_footer.html" %}
+    </main>
 </body>
 </html>

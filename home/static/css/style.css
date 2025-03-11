@@ -23,16 +23,22 @@ ul{
     padding: 0;
 }
 
+
+@media all{
+
 /* BASE */
 
 footer{
     padding: 10px;
     width: 100vw;
     height: 50px;
-    text-align: center;
+}
+footer p{
+    position: absolute;
+    left: 45vw;
 }
 
-.container-principal{
+.main{
     display: flex;
     flex-flow: column nowrap;
     justify-content: stretch;
@@ -72,6 +78,10 @@ footer{
     padding: 10px;
     font-size: medium;
     font-weight: 500;
+    opacity: .9;
+    border: 1px solid black;
+    border-radius: 5px;
+    filter: drop-shadow(1px 4px 6px var(--text_color));
 }
 
 .column{
@@ -90,6 +100,17 @@ footer{
     width: 450px;
 }
 
+.row-wrap{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    justify-items: center;
+    min-width: 200px;
+    width: 50vw;
+    max-width: 600px;
+    align-items: center;
+}
+
 .row-contact{
     justify-content: space-between;
 }
@@ -97,10 +118,38 @@ footer{
 .imagem{
     border: 10px solid var(--yellow);
     border-radius: 50%;
-    min-width: 350px;
-    width: 450px;
-    min-height: 350px;
-    height: 450px;
+    min-width: 200px;
+    width: 300px;
+    min-height: 200px;
+    height: 300px;
+}
+
+.imagem-selo{
+    min-width: 100px;
+    width: 150px;
+    min-height: 100px;
+    height: 150px;
+    padding: 10px;
+    opacity: .85;
+
+}
+
+.imagem-excel{
+    width: 75px;
+    height: 75px;
+    padding: 10px;
+    opacity: .85;
+
+}
+
+.imagem-git{
+    min-width: 100px;
+    width: 150px;
+    min-height: 50px;
+    height: 75px;
+    padding: 10px;
+    opacity: .85;
+
 }
 
 /* MENU */
@@ -116,12 +165,51 @@ footer{
     max-width: 500px;
     font-size: larger;
     font-weight: 900;
-    background-color: var(--yellow);
     height: 50px;
-    border: 5px solid white;
-    border-radius: 10px;
 }
 
 .menu a {
-    color: var(--back_color);
+    color: var(--yellow);
+}
+
+.menu a:hover{
+    filter: drop-shadow(2px 3px 5px var(--text_color));
+    transition: all ease-in-out 300ms;
+}
+
+}
+
+@media (min-width: 724px) {
+    .main{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-items: center;
+        align-items: flex-start;
+    }
+
+    .menu{
+        left: 20px;
+        top: 50px;
+        position: sticky;
+        flex-flow: column nowrap;    
+        min-height: 600px;
+        height: 60vhvh;
+        max-height: 2100px;
+        min-width: 200px;
+        width: 15vw;
+        max-width: 250px;
+        justify-content: flex-start;
+        padding: 10px;
+        background-color: rgba(161, 180, 194, 0.156);
+        opacity: .95;
+        border: 10px solid var(--yellow);
+    }
+
+
+    .content-column{
+        min-width: calc(100vw-200px);
+        width: 85vw;
+        max-width: calc(100vw-300px);
+    }
 }
