@@ -1,17 +1,24 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+<div class="container">
     <h1>Projects</h1>
     <p>Here are some of the projects I have worked on:</p>
-    <div class="container">
+        {% if projects %}
         {% for item in projects %}
-            <div class='card'>
-                {{ item.name }}
-                {{ item.description }}
-                <a href="{{ item.link_github }}" class='link'>
-                    <img src="{% static "images/github.svg" %}" alt="ícone do github" class='icon'>
-                </a>
-            </div>
+        <div class='card'>
+            <p>{{ item.name }}</p>
+            <p>{{ item.description }}</p>
+            <a href="{{ item.link_github }}" class='link'>
+                <img src="{% static "images/github.svg" %}" alt="ícone do github" class='icon'>
+                <p>Github</p>
+            </a>
+        </div>
         {% endfor %}
+        {% else %}
+        <div class='card'>
+            <p>No found!</p>
+        </div>
+        {% endif %}
     </div>
 {% endblock content %}

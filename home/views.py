@@ -22,6 +22,21 @@ def projects(request):
                 'description': 'Descrição do projeto 3',
                 'link_github': 'localhost:8000',
             },
+            {
+                'name': 'Projeto 3',
+                'description': 'Descrição do projeto 3',
+                'link_github': 'localhost:8000',
+            },
+            {
+                'name': 'Projeto 3',
+                'description': 'Descrição do projeto 3',
+                'link_github': 'localhost:8000',
+            },
+            {
+                'name': 'Projeto 3',
+                'description': 'Descrição do projeto 3',
+                'link_github': 'localhost:8000',
+            },
         ]
     }
     return render(request, 'projects/projects.html', context=context)

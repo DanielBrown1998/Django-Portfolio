@@ -29,6 +29,8 @@ ul{
 /* BASE */
 
 footer{
+    position: stick;
+    bottom: 0;
     padding: 10px;
     width: 100vw;
     height: 50px;
@@ -54,17 +56,44 @@ footer p{
 .icon{
     width: 30px;
     height: 30px;
-    
 }
 
 
 /* PROJECTS */
 
-.container{}
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
 
-.card{}
+.card{
+    display: flex;
+    flex-flow: column;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.289);
+    border-radius: 1em;
+    padding: 20px;
+    min-width: 250px;
+    width: 10vw;
+    max-width: 350px;
+    min-width: 250px;
+    width: 10vw;
+    max-width: 350px;
+}
 
-.link{}
+.link{
+    display: flex;
+    justify-items: center;
+    justify-content: space-around;
+    align-items: center;
+}
 
 /* HOME */
 
