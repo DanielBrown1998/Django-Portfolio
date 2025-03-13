@@ -11,31 +11,42 @@ def projects(request):
                 'name': 'Projeto 1',
                 'description': 'Descrição do projeto 1',
                 'link_github': 'localhost:8000',  
+                'imagem': 'imagem/django.svg', 
             },
             {
                 'name': 'Projeto 2',
                 'description': 'Descrição do projeto 2',
                 'link_github': 'localhost:8000',
+                'imagem': 'imagem/django.svg', 
+
             },
             {
                 'name': 'Projeto 3',
                 'description': 'Descrição do projeto 3',
                 'link_github': 'localhost:8000',
+                'imagem': 'imagem/django.svg', 
+
             },
             {
                 'name': 'Projeto 3',
                 'description': 'Descrição do projeto 3',
                 'link_github': 'localhost:8000',
+                'imagem': 'imagem/django.svg', 
+
             },
             {
                 'name': 'Projeto 3',
                 'description': 'Descrição do projeto 3',
                 'link_github': 'localhost:8000',
+                'imagem': 'imagem/django.svg', 
+
             },
             {
                 'name': 'Projeto 3',
                 'description': 'Descrição do projeto 3',
                 'link_github': 'localhost:8000',
+                'imagem': 'imagem/django.svg', 
+
             },
         ]
     }

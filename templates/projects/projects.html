@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div class="container">
-    <h1>Projects</h1>
-    <p>Here are some of the projects I have worked on:</p>
-        {% if projects %}
-        {% for item in projects %}
+<h1>Projects</h1>
+<p>Here are some of the projects I have worked on:</p>
+{% if projects %}
+{% for item in projects %}
+    <div class="container">
         <div class='card'>
             <p>{{ item.name }}</p>
             <p>{{ item.description }}</p>
@@ -14,11 +14,13 @@
                 <p>Github</p>
             </a>
         </div>
+        <img src="{{item.imagem}}" alt="plano de fundo do projeto" class=>
+
+    </div>
         {% endfor %}
         {% else %}
         <div class='card'>
             <p>No found!</p>
         </div>
         {% endif %}
-    </div>
 {% endblock content %}
