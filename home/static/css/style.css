@@ -19,8 +19,9 @@ a{
 }
 
 ul{
+    margin: 0px;
     list-style-type: none;
-    padding: 0;
+    padding: 10px;
 }
 
 
@@ -29,8 +30,6 @@ ul{
 /* BASE */
 
 footer{
-    position: stick;
-    bottom: 0;
     padding: 10px;
     width: 100vw;
     height: 50px;
@@ -67,23 +66,28 @@ footer p{
 
 .container{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-items: center;
     justify-content: center;
     align-items: center;
+    width: max-content;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--yellow);
 
 }
 
 .card{
     display: flex;
+    justify-content: space-evenly;
     flex-flow: column;
     justify-items: center;
     align-items: center;
     margin: 10px;
-    margin-right: 0px;
+    margin-bottom: 0px;
     border: 0px solid white;
-    background-color: rgba(255, 255, 255, 0.289);
-    border-radius: 1em 0px 0px 1em;
+    background-color: rgba(255, 255, 255, 0.126);
+    border-radius: 1em 1em 0px 0px;
     padding: 20px;
     min-width: 250px;
     width: 10vw;
@@ -110,26 +114,19 @@ footer p{
     margin: 10px;
 }
 
-.back-project-default{
-
-    background-color: rgba(255, 255, 255, 0.289);
-
-    border: 0px solid var(--text_color);
-    border-radius: 0px 1em 1em 0px;
-    min-width: 250px;
-    width: 10vw;
-    max-width: 350px;
-    min-height: 400px;
-    height: 20vh;
-    max-height: 600px;
+.tec{
+    height: 6vw;
+    max-height: 100px;
+    width: 6vw;
+    max-width: 100px;
 }
 
-.back-project{
-
-    background-color: rgba(255, 255, 255, 0.289);
-
+.back-project, .back-project-default{
+    background-color: rgba(255, 255, 255, 0.126);
+    
+    
     border: 0px solid var(--text_color);
-    border-radius: 0px 1em 1em 0px;
+    border-radius: 0px 0em 1em 1em;
     min-width: 250px;
     width: 10vw;
     max-width: 350px;
@@ -139,9 +136,9 @@ footer p{
 }
 
 .back-project:hover{
-
+    
     scale: 150% 150% 10%;
-    transition: all ease 300ms;
+    transition: all ease 500ms;
     border-radius: 1em;
     border: none;
 
@@ -176,10 +173,15 @@ footer p{
 
 .row{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    justify-items: center;
     align-items: center;
     min-width: 300px;
     width: 450px;
+}
+
+.row a {
+    margin: 10px;
 }
 
 .row-wrap{
@@ -234,21 +236,26 @@ footer p{
 
 }
 
+
+
 /* MENU */
 
 .menu{
+    position: sticky;
+    top: 0px;
     display: flex;
     flex: row nowrap;
     justify-content: space-around;
     align-items: center;
     justify-items: center;
-    min-width: 200px;
-    width: 350px;
-    max-width: 500px;
+    width: 100%;
     font-size: larger;
     font-weight: 900;
     height: 50px;
+    background: linear-gradient(to bottom, black, rgb(1, 5, 31), #09053c);
+    filter: drop-shadow(30px 20px 10px var(--back_color));
 }
+
 
 .menu a {
     color: var(--yellow);
@@ -270,7 +277,7 @@ footer p{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-items: center;
+        justify-items: flex-start;
         align-items: flex-start;
     }
 
@@ -287,15 +294,52 @@ footer p{
         max-width: 250px;
         justify-content: flex-start;
         padding: 10px;
-        background-color: rgba(161, 180, 194, 0.156);
-        opacity: .95;
         border: 10px solid var(--yellow);
+        border-radius: 0px 2em 0px 2em;
+        filter: opacity(.8);
+        scale: 100% 100% 10%;
+
+    }
+
+
+    .container{
+        flex-flow: row nowrap;
+        min-width: calc(100vw - 200px);
+        width: 85vw;
+        max-width: calc(100vw - 300px);
+        border: none;
     }
 
 
     .content-column{
-        min-width: calc(100vw-200px);
+        min-width: calc(100vw - 200px);
         width: 85vw;
-        max-width: calc(100vw-300px);
+        max-width: calc(100vw - 300px);
     }
+
+
+    .card{
+        margin: 10px;
+        margin-right: 0px;
+        border: 1px solid var(--text_color);
+        border-right: none;
+        border-radius:  1em 0px 0px 1em;
+    }
+
+    
+    .back-project, .back-project-default{
+    
+    
+        border: 1px solid var(--text_color);
+        border-left: none;
+        border-radius: 0px 1em 1em 0px;
+        min-width: 250px;
+        width: 10vw;
+        max-width: 350px;
+        min-height: 400px;
+        height: 20vh;
+        max-height: 600px;
+    }
+    
+    
 }

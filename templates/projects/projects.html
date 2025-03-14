@@ -13,6 +13,7 @@
                 <img src="{% static 'images/github.svg' %}" alt="ícone do github" class='icon'>
                 <p><b>Github</b></p>
             </a>
+            <img src="{% static item.tecnology  %}" alt="plano de fundo do projeto" class="tec">
         </div>
         {% if item.image %}
             <img src="{{item.image.url}}" alt="plano de fundo do projeto" class="back-project">

@@ -1,26 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+
     <div class="column">
         <h1>{{name}}</h1>
-        <p>Welcome to my website! Here you can find information about me and my projects.</p>
-        <p>Feel free to explore the menu and contact me if you have any questions.</p>
-        
-        <h2>Bio:</h2>
-        <div class="bio">{{bio}}</div>
-        
-        <h2>Experience</h2>
-        <div class="bio">
-            Atualmente, sou monitor de Arquitetura de Computadores na UERJ-ZO.<br>
-            Ministro as monitorias de forma a individualizar as demandas dos alunos.
-        </div>
-        
-
-    </div>
-
-
-
-    <div class="column">
         
         <img src="{% static 'images/minha_imagem_sem_filtro.png' %}" alt="minha foto" class='imagem'>
         
@@ -35,6 +18,21 @@
         </div>
     </div>
     <div class="column">
+        <p>Welcome to my website! Here you can find information about me and my projects.</p>
+        <p>Feel free to explore the menu and contact me if you have any questions.</p>
+        
+        <h2>Bio:</h2>
+        <div class="bio">{{bio}}</div>
+        
+        <h2>Experience</h2>
+        <div class="bio">
+            Atualmente, sou monitor de Arquitetura de Computadores na UERJ-ZO.<br>
+            Ministro as monitorias de forma a individualizar as demandas dos alunos.
+        </div>
+        
+
+    </div>
+    <div class="column">
 
         <h2>Tecnologies</h2>
         <div class="row-wrap">
@@ -46,7 +44,6 @@
             <img src="{% static 'images/elephant.png' %}" alt="PostgreeSQL logo" class="imagem-selo">
             <img src="{% static 'images/git.png' %}" alt="GIT logo" class="imagem-git">
             <img src="{% static 'images/excel.jpg' %}" alt="Microsoft Excel logo" class="imagem-excel">
-
 
         </div>
 
