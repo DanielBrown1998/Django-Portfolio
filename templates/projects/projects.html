@@ -7,20 +7,25 @@
 {% for item in projects %}
     <div class="container">
         <div class='card'>
-            <p>{{ item.name }}</p>
-            <p>{{ item.description }}</p>
-            <a href="{{ item.link_github }}" class='link'>
-                <img src="{% static "images/github.svg" %}" alt="ícone do github" class='icon'>
-                <p>Github</p>
+            <p><b>{{ item.name }}</b></p>
+            <p><b>{{ item.description }}</b></p>
+            <a href="{{ item.link_github }}" class='link' target="_blank">
+                <img src="{% static 'images/github.svg' %}" alt="ícone do github" class='icon'>
+                <p><b>Github</b></p>
             </a>
         </div>
-        <img src="{{item.imagem}}" alt="plano de fundo do projeto" class=>
-
-    </div>
-        {% endfor %}
+        {% if item.image %}
+            <img src="{{item.image.url}}" alt="plano de fundo do projeto" class="back-project">
         {% else %}
-        <div class='card'>
-            <p>No found!</p>
-        </div>
+            <img src="{% static item.tecnology  %}" alt="plano de fundo do projeto" class="back-project-default">
         {% endif %}
+        {% comment "Quando o model pedir um background par ao usuario" %}
+        {% endcomment %}
+    </div>
+{% endfor %}
+{% else %}
+    <div class='card'>
+        <p>No projects!</p>
+    </div>
+{% endif %}
 {% endblock content %}

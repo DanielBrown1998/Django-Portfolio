@@ -80,16 +80,24 @@ footer p{
     justify-items: center;
     align-items: center;
     margin: 10px;
-    border: 1px solid white;
+    margin-right: 0px;
+    border: 0px solid white;
     background-color: rgba(255, 255, 255, 0.289);
-    border-radius: 1em;
+    border-radius: 1em 0px 0px 1em;
     padding: 20px;
     min-width: 250px;
     width: 10vw;
     max-width: 350px;
-    min-width: 250px;
-    width: 10vw;
-    max-width: 350px;
+    min-height: 400px;
+    height: 20vh;
+    max-height: 600px;
+}
+
+.card:hover{
+    scale: 105% 105% 102%;
+    transition: all ease 300ms;
+    border-radius: 1em;
+    border: 5px solid var(--yellow);
 }
 
 .link{
@@ -98,6 +106,47 @@ footer p{
     justify-content: space-around;
     align-items: center;
 }
+.link p{
+    margin: 10px;
+}
+
+.back-project-default{
+
+    background-color: rgba(255, 255, 255, 0.289);
+
+    border: 0px solid var(--text_color);
+    border-radius: 0px 1em 1em 0px;
+    min-width: 250px;
+    width: 10vw;
+    max-width: 350px;
+    min-height: 400px;
+    height: 20vh;
+    max-height: 600px;
+}
+
+.back-project{
+
+    background-color: rgba(255, 255, 255, 0.289);
+
+    border: 0px solid var(--text_color);
+    border-radius: 0px 1em 1em 0px;
+    min-width: 250px;
+    width: 10vw;
+    max-width: 350px;
+    min-height: 400px;
+    height: 20vh;
+    max-height: 600px;
+}
+
+.back-project:hover{
+
+    scale: 150% 150% 10%;
+    transition: all ease 300ms;
+    border-radius: 1em;
+    border: none;
+
+}
+
 
 /* HOME */
 
